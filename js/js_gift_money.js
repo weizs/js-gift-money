@@ -11,7 +11,7 @@
             height:56,
             xMin:0,
             yMin:0,
-            size:3,
+            size:4,
             wrapWidth:800,
             wrapHeight:1200,
             minDelay:300,
@@ -37,11 +37,13 @@
                 _self.stop();
                 _self.options.callback.call(this,$this,$this.attr('id').split('_')[1]);
             });
-            _self.wrap.on('animationend','.hb',function(){
+            _self.wrap.on('animationend webkitAnimationEnd','.hb',function(){
                 var $this=$(this);
                 $this.css(_self.getPos());
+                $this.css('-webkit-animation-delay',Math.random().toFixed(1)+'s');
                 $this.toggleClass('a1').toggleClass('a2');
-                console.log($this);
+                //$this.toggleClass('a1').toggleClass('a2');
+                //console.log($this);
             });
         },
         stop:function(){
@@ -51,7 +53,7 @@
         },
         play:function(){
             var _self=this;
-            console.log('play');
+            //console.log('play');
             _self.animate=true;
             for(var i=0;i<_self.options.size;i++){
                 setTimeout(function(){

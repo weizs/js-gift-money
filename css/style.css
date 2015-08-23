@@ -23,6 +23,7 @@ html, body {
     font-size: 14px;
     color: #FFF;
     text-align: center;
+    visibility: hidden;
 }
 
 .a1 {
