@@ -7,11 +7,11 @@
 
     var defaultOptions={
             callback:function(){},
-            width:60,
-            height:36,
+            width:100,
+            height:56,
             xMin:0,
             yMin:0,
-            size:5,
+            size:3,
             wrapWidth:800,
             wrapHeight:1200,
             minDelay:300,
@@ -37,6 +37,12 @@
                 _self.stop();
                 _self.options.callback.call(this,$this,$this.attr('id').split('_')[1]);
             });
+            _self.wrap.on('animationend','.hb',function(){
+                var $this=$(this);
+                $this.css(_self.getPos());
+                $this.toggleClass('a1').toggleClass('a2');
+                console.log($this);
+            });
         },
         stop:function(){
             this.animate=false;
@@ -61,9 +67,9 @@
 
             _self.wrap.append(object.dom);
 
-            animate[object.index]=setTimeout(function(){
-                _self.hide(object);
-            },_self.getDelay());
+            //animate[object.index]=setTimeout(function(){
+            //    _self.hide(object);
+            //},_self.getDelay());
         },
         hide:function(object){
             object.dom.hide();
@@ -85,7 +91,7 @@
             position[index]=pos;
             indexCache.push(index);
             return {
-                dom:$('<div id="id_'+index+'" class="hb" style="left:'+pos.x+'px;top:'+pos.y+'px;width:'+opt.width+'px;height:'+opt.height+'px;line-height:'+opt.height+'px;">点我</div>'),
+                dom:$('<div id="id_'+index+'" class="hb a1" style="left:'+pos.left+'px;top:'+pos.top+'px;width:'+opt.width+'px;height:'+opt.height+'px;line-height:'+opt.height+'px;">点我</div>'),
                 id:index
             };
         },
@@ -97,8 +103,8 @@
         getPos:function(){
             var opt=this.options;
             return {
-                x:opt.xMin+parseInt((opt.wrapWidth-opt.width-opt.xMin)*Math.random()),
-                y:opt.yMin+parseInt((opt.wrapHeight-opt.height-opt.yMin)*Math.random())
+                left:opt.xMin+parseInt((opt.wrapWidth-opt.width-opt.xMin)*Math.random()),
+                top:opt.yMin+parseInt((opt.wrapHeight-opt.height-opt.yMin)*Math.random())
             };
         }
     };

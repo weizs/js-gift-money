@@ -1,0 +1,61 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.hb-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #ffc543;
+}
+
+.hb {
+    background: #ff5e2f;
+    border-radius: 3px;
+    position: absolute;
+    font-size: 14px;
+    color: #FFF;
+    text-align: center;
+}
+
+.a1 {
+    -webkit-animation:animate_1 .5s;
+}
+
+.a2 {
+    -webkit-animation:animate_2 .5s;
+}
+
+@-webkit-keyframes animate_1 {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    50% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes animate_2 {
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
