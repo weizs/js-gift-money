@@ -40,7 +40,7 @@
             _self.wrap.on('animationend webkitAnimationEnd','.hb',function(){
                 var $this=$(this);
                 $this.css(_self.getPos());
-                $this.css('-webkit-animation-delay',Math.random().toFixed(1)+'s');
+                $this.css('-webkit-animation-delay',Math.random().toFixed(1)*1.5+'s');
                 $this.toggleClass('a1').toggleClass('a2');
                 //$this.toggleClass('a1').toggleClass('a2');
                 //console.log($this);
@@ -134,3 +134,8 @@
     },1);
 
 })();
+
+
+
+
+

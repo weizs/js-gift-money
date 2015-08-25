@@ -5,10 +5,25 @@
     <title></title>
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
     <script src="js/zepto.js"></script>
-    <script src="js/js_gift_money.js"></script>
-    <link rel="stylesheet" href="css/style.css"/>
+    <!--<script src="js/js_gift_money.js"></script>-->
+    <script src="js/css3_gift_money.js"></script>
+    <!--<link rel="stylesheet" href="css/style.css"/>-->
+    <link rel="stylesheet" href="css/css3.css"/>
 </head>
 <body>
 <div class="hb-wrap" id="wrap"></div>
+<script>
+
+    var wrap=$('#wrap');
+
+    $.hb({
+        wrap:wrap,
+        wrapWidth:wrap.width(),
+        wrapHeight:wrap.height(),
+        callback:function(node,index){
+            alert('点到了红包：'+index);
+        }
+    }).play();
+</script>
 </body>
 </html>

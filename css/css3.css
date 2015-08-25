@@ -1,0 +1,87 @@
+* { margin: 0; padding: 0;}
+
+.hb-wrap { position: absolute; height: 100%; width: 100%; background: url("../images/bg.jpg");}
+
+.hb {
+    background: #ff5e2f url("../images/hongbao.png") no-repeat center center;
+    background-size: 56px 60px;
+    position: absolute;
+    visibility: hidden;
+}
+
+.hb.r1 { -webkit-transform: rotate(5deg) scale(0.8); transform: rotate(5deg) scale(0.8);}
+.hb.r2 { -webkit-transform: rotate(-5deg) scale(0.8); transform: rotate(-5deg) scale(0.8);}
+
+.a1 {
+    -webkit-animation:animate_1 .6s;
+    animation:animate_1 .6s;
+}
+
+.a2 {
+    -webkit-animation:animate_2 .6s;
+    animation:animate_2 .6s;
+}
+
+@-webkit-keyframes animate_1 {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    50% {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes animate_1 {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    50% {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes animate_2 {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    50% {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes animate_1 {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    50% {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
