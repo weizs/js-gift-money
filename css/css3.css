@@ -6,11 +6,13 @@
     background: #ff5e2f url("../images/hongbao.png") no-repeat center center;
     background-size: 56px 60px;
     position: absolute;
-    visibility: hidden;
+    opacity: 0;
 }
 
 .hb.r1 { -webkit-transform: rotate(5deg) scale(0.8); transform: rotate(5deg) scale(0.8);}
 .hb.r2 { -webkit-transform: rotate(-5deg) scale(0.8); transform: rotate(-5deg) scale(0.8);}
+.hb.r1.show { opacity: 1;-webkit-transform: rotate(5deg) scale(1); transform: rotate(5deg) scale(1);}
+.hb.r2.show { opacity: 1;-webkit-transform: rotate(-5deg) scale(1); transform: rotate(-5deg) scale(1);}
 
 .a1 {
     -webkit-animation:animate_1 .6s;
@@ -25,63 +27,51 @@
 @-webkit-keyframes animate_1 {
     0% {
         opacity: 0;
-        visibility: hidden;
     }
     50% {
         opacity: 1;
-        visibility: visible;
         transform: scale(1);
     }
     100% {
         opacity: 0;
-        visibility: hidden;
     }
 }
 
-@-webkit-keyframes animate_1 {
+@-webkit-keyframes animate_2 {
     0% {
         opacity: 0;
-        visibility: hidden;
     }
     50% {
         opacity: 1;
-        visibility: visible;
         transform: scale(1);
     }
     100% {
         opacity: 0;
-        visibility: hidden;
-    }
-}
-
-@keyframes animate_2 {
-    0% {
-        opacity: 0;
-        visibility: hidden;
-    }
-    50% {
-        opacity: 1;
-        visibility: visible;
-        transform: scale(1);
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
     }
 }
 
 @keyframes animate_1 {
     0% {
         opacity: 0;
-        visibility: hidden;
     }
     50% {
         opacity: 1;
-        visibility: visible;
         transform: scale(1);
     }
     100% {
         opacity: 0;
-        visibility: hidden;
+    }
+}
+
+@keyframes animate_2 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
     }
 }
